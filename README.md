@@ -1,3 +1,5 @@
+live-demo of the landing-page: https://ice-paint-store.netlify.app
+
 # first step
 
 Locate the github invitation concerning collaboration on the project and Accept it through your email.
