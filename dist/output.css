@@ -593,6 +593,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   isolation: auto;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
 .float-right {
   float: right;
 }
@@ -753,6 +761,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\] {
   height: calc(100% - 0.25rem);
+}
+
+.h-1\/2 {
+  height: 50%;
 }
 
 .w-full {
@@ -1812,6 +1824,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .text-left {
