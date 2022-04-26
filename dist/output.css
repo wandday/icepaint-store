@@ -732,6 +732,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 7rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2053,6 +2057,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -2162,6 +2171,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-blue-200 {
+  --tw-text-opacity: 1;
+  color: rgb(191 219 254 / var(--tw-text-opacity));
+}
+
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2500,9 +2519,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   content: var(--tw-content);
 }
 
-.\[attr\:value\] {
+/* .\[attr\:value\] {
   attr: value;
-}
+} */
 
 .\[content\:\'hello\'\] {
   content: 'hello';
@@ -2514,6 +2533,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-100:hover {
+  --tw-text-opacity: 1;
+  color: rgb(254 249 195 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-200:hover {
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
@@ -2602,6 +2636,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:float-right {
     float: right;
   }
@@ -2609,6 +2647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
@@ -2665,6 +2707,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:font-semibold {
