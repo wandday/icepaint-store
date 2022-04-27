@@ -5,124 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet" />
-
     <title>Ice Paint Store</title>
 </head>
 <body>
-    
-    <header class="bg-black text-white p-4">
-            <nav
-              class="relative bg-black w-full py-2 flex justify-around md:justify-between md:px-16"
-            >
-              <div class="logo md:w-1/6 flex justify-between">
-                <!-- Hamburger Icon -->
-                <!-- <button
-                  id="menu-btn"
-                  class="block hamburger md:hidden focus:outline-none"
-                >
-                  <span class="hamburger-top"></span>
-                  <span class="hamburger-middle"></span>
-                  <span class="hamburger-bottom"></span>
-                </button> -->
-      
-                <button id="hamburger" class="text-white mr-3 hamburger md:hidden">
-                  <span>
-                    <i class="ri-menu-fill ri-2x"></i>
-                  </span>
-                </button>
-      
-                <img class="cursor-pointer" src="./img/icepaintlogo.png" alt="" />
-              </div>
-      
-              <ul
-                id=""
-                class="h-100 hidden justify-between sm:flex sm:items-center text-white md:w-1/6"
-              >
-                <li class="list-none md:mx-2">
-                  <a href="#">Home</a>
-                </li>
-                <li class="list-none md:mx-2">
-                  <a href="#">About</a>
-                </li>
-                <li class="list-none md:mx-2">
-                  <a href="#">Help</a>
-                </li>
-              </ul>
-      
-              <div class="flex justify-between items-center">
-                <a href="#" class="text-white mr-8">Login</a>
-                <img class="cursor-pointer" src="./img/shopping-cart.png" alt="" />
-              </div>
-            </nav>
-            <ul
-              id="mobile-nav"
-              class="hidden h-1/2 flex-col w-1/2 p-4 absolute bg-black text-white text-center py-6 bottom-0 left-0"
-            >
-              <li class="list-none p-6 my-6">
-                <a href="#">Home</a>
-              </li>
-              <li class="list-none p-6 my-6">
-                <a href="#">About</a>
-              </li>
-              <li class="list-none p-6 my-6">
-                <a href="#">Help</a>
-              </li>
-            </ul>
+    <header>
+        <nav
+        class="relative bg-black w-full py-2 flex justify-around md:justify-between md:px-16"
+      >
+        <div class="logo md:w-1/6 flex justify-between">
+          <!-- Hamburger Icon -->
+          <!-- <button
+            id="menu-btn"
+            class="block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button> -->
+
+          <button id="hamburger" class="text-white mr-3 hamburger md:hidden">
+            <span>
+              <i class="ri-menu-fill ri-2x"></i>
+            </span>
+          </button>
+
+          <img class="cursor-pointer" src="./img/icepaintlogo.png" alt="" />
+        </div>
+
+        <ul
+          id=""
+          class="h-100 hidden justify-between sm:flex sm:items-center text-white md:w-1/6"
+        >
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="/">Home</a>
+          </li>
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="#explore">About</a>
+          </li>
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="#footer">Help</a>
+          </li>
+        </ul>
+
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-white mr-8">Login</a>
+          <img class="cursor-pointer" src="./img/shopping-cart.png" alt="" />
+        </div>
+      </nav>
+
+      <ul
+        id="mobile-nav"
+        class="hidden flex-col w-1/2 p-4 absolute bg-black text-white text-center py-4 left-0"
+      >
+        <li class="list-none p-6 my-6">
+          <a href="#">Home</a>
+        </li>
+        <li class="list-none p-6 my-6">
+          <a href="#">About</a>
+        </li>
+        <li class="list-none p-6 my-6">
+          <a href="#">Help</a>
+        </li>
+      </ul>
     </header>
 
-    <!-- Add button -->
-    <div class="flex justify-end">
-        <button class=" m-6 -mb-6  text-white bg-blue-800 rounded-md px-4 py-2 mt-12 mr-28" id="newProduct">Add New Products</button>
+    <div class="flex justify-end" >
+      <button class="bg-blue-800 mt-8 px-5 text-white py-2 rounded-md hover:bg-blue-600 mb-4 " id="newProduct">Add New Products</button>
     </div>
 
+    <div class="w-full h-full mx-auto mt-4">
+        
+        
 
-  <!-- Html table -->
-  <table class="overflow-auto relative w-10/12 h-screen mb-10 mt-8 m-auto bg-gray-200">
-      <!-- table -->
-      <thead class="absolute flex flex-row justify-between m-auto bg-gray-500 w-full ">
-          <tr class=" text-white m-auto py-2">
-              <th class="px-14">Description</th>
-              <th class="px-14">Volume (L)</th>
-              <th class="px-14">Price/Volume (#)</th>
-              <th class="px-14">Total</th>
-              <th class="px-14">Action</th>
-          </tr>
-      </thead>
+        <div class="overflow-auto  shadow md:block">
+            <table class=" w-full h-screen  bg-gray-200  ">
+                <thead class=" flex flex-row justify-between text-white bg-gray-500">
+                    <tr class="">
+                        <th class="py-2 px-16">ID</th>
+                        <th class="px-16">Description</th>
+                        <th class="px-16">Volume L</th>
+                        <th class="px-16">Price/Volume (#)</th>
+                        <th class="px-20">Total</th>
+                        <th class="px-16">Action</th>
+                    </tr>
+                </thead>
 
-      <tbody class="mt-10 flex flex-row justify-between m-auto">
-          <tr class="m-auto py-0 mt-8 bg-white ml-14 rounded-md mx-auto font-medium border-l-4 border-blue-800">
-              <td class="px-20 space-x-10">Ice Blue</td>
-              <td class="px-20">35</td>
-              <td class="px-20">500</td>
-              <td class="px-20">17500</td>
-              <div class="">
-                <td class="px-4 text-blue-700 cursor-pointer" id="editBtn">Edit</td>
-                <td class="px-4 text-red-700 cursor-pointer" id="deleteBtn">Remove</td>
-               </div>
-          </tr>
-      </tbody>
+                <tbody class=" flex flex-col justify-between m-auto mt-10  ">
+                    <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
+                        <td class="px-4 py-1">1</td>
+                        <td class="px-24">Ice Blue</td>
+                        <td class="px-24">35</td>
+                        <td class="px-24">500</td>
+                        <td class="px-28">17500</td>
+                        <div class="">
+                            <td class="px-4 text-blue-700 hover:cursor-pointer" id="editBtn">Edit</td>
+                            <td class="px-6 text-red-700 hover:cursor-pointer" id="deleteBtn">Delete</td>
+                        </div>
+                    </tr>
 
-  </table>
+                    <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
+                      <td class="px-4 py-1">2</td>
+                      <td class="px-24">Ice Blue</td>
+                      <td class="px-24">35</td>
+                      <td class="px-24">500</td>
+                      <td class="px-28">17500</td>
+                      <div class="">
+                          <td class="px-4 text-blue-700 hover:cursor-pointer" id="editBtn">Edit</td>
+                          <td class="px-6 text-red-700 hover:cursor-pointer" id="deleteBtn">Delete</td>
+                      </div>
+                    </tr>
 
-  <!-- <hr class=""> -->
+                    <!-- <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
+                      <td class="px-4 py-1">2</td>
+                      <td class="px-22">Ice Blue</td>
+                      <td class="px-22">35</td>
+                      <td class="px-22">500</td>
+                      <td class="px-28">17500</td>
+                      <div class="">
+                          <td class="px-2 text-blue-700 hover:cursor-pointer" id="editBtn">Edit</td>
+                          <td class="px-4 text-red-700 hover:cursor-pointer" id="deleteBtn">Delete</td>
+                      </div>
+                    </tr> -->
+                       
+                </tbody>
 
-  <section class="w-10/12 bg-gray-200 h-3/6 m-auto -mt-6 ">
-      <!-- summary section -->
-      <div class="p-6 text-xl ml-12 ">
-        <h2 class="text-black font-normal mb-6">Products Summary</h2>
-        <h2 class="text-black font-normal">Total Price</h2>
-      </div>
-  </section>
-
-  <section class="w-10/12 m-auto bg-blue-800 h-2/6">
-      <button class="flex flex-row align-middle p-3 text-xl ml-96 text-white ">
-        <h2>Proceed to Checkout</h2>
-        <div class="flex align-middle justify-center mt-1 space-x-10 gap-6">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13H4v-2h8V4l8 8-8 8z" fill="rgba(255,255,255,1)"/></svg>
+            </table>
         </div>
-      </button>
-  </section>
 
-  <script src="productcart.js"></script>
+    </div>
+
+    <hr class="w-full mx-auto">
+    <!-- summary section -->
+    <section class="w-full bg-gray-200 h-3/6 m-auto mx-auto mt-6">
+      <div class="p-6 text-xl font-normal md:ml-10">
+        <h2 class="mb-6">Products Summary:</h2>
+        <h2>Total Price</h2>
+      </div>
+    </section>
+
+    <section class="overflow-auto w-full m-auto bg-blue-800 h-2/6 md:block">
+      <button class="flex align-middle ml-4 p-3 text-xl md:ml-96 xl:ml-96 text-white">
+        <h2>Proceed to Checkout</h2>
+      </button>
+    </section>
+
+    <script src="productcart.js"></script>
 </body>
 </html>

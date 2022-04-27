@@ -5,3 +5,7 @@ const del = document.getElementById('deleteBtn')
 product.addEventListener('click', ()=>{
     alert('i am beautiful')
 })
+
+del.addEventListener('click', ()=>{
+    alert('are you sure you want to delete?')
+})
