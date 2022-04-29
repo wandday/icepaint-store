@@ -19,10 +19,11 @@ function login() {
   const password = document.getElementById("password").value;
 
   if (email === "admin@gmail.com" && password === "admin") {
-    alert("Welcome admin");
-  } else if (email === "user@gmail.com" && password === "user") {
-    alert("welcome 😊");
-    window.location();
+    // alert("Welcome admin");
+    window.location.href = "http://localhost:5500/admin.html?";
+    // } else if (email === "user@gmail.com" && password === "user") {
+    //   alert("welcome 😊");
+    //   window.location("http://127.0.0.1:5500/admin.html");
   } else {
     alert("invalid identity");
   }
