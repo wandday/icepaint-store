@@ -22,6 +22,7 @@ function login() {
     alert("Welcome admin");
   } else if (email === "user@gmail.com" && password === "user") {
     alert("welcome 😊");
+    window.location();
   } else {
     alert("invalid identity");
   }
