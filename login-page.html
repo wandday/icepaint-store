@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Login Page</title>
+  </head>
+  <body class="sm:w-full sm:tracking-widest">
+    <div class="w-full">
+      <nav
+        class="relative bg-black w-full py-2 flex justify-around sm:w-full sm:tracking-widest md:justify-between md:px-16"
+      >
+        <div class="logo md:w-1/6 flex justify-between">
+          <!-- Hamburger Icon -->
+          <!-- <button
+        id="menu-btn"
+        class="block hamburger md:hidden focus:outline-none"
+      >
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button> -->
+
+          <button id="hamburger" class="text-white mr-3 hamburger md:hidden">
+            <span>
+              <i class="ri-menu-fill ri-2x"></i>
+            </span>
+          </button>
+
+          <img class="cursor-pointer" src="./img/icepaintlogo.png" alt="" />
+        </div>
+
+        <ul
+          id=""
+          class="h-100 hidden justify-between sm:flex sm:items-center text-white md:w-1/6"
+        >
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="/">Home</a>
+          </li>
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="#explore">About</a>
+          </li>
+          <li class="hover:text-gray-600 list-none md:mx-2">
+            <a href="#footer">Help</a>
+          </li>
+        </ul>
+
+        <div class="flex justify-between items-center">
+          <img class="cursor-pointer" src="./img/shopping-cart.png" alt="" />
+        </div>
+      </nav>
+
+      <ul
+        id="mobile-nav"
+        class="hidden flex-col w-1/2 p-4 absolute bg-black text-white text-center py-4 left-0"
+      >
+        <li class="list-none p-6 my-6">
+          <a href="#">Home</a>
+        </li>
+        <li class="list-none p-6 my-6">
+          <a href="#">About</a>
+        </li>
+        <li class="list-none p-6 my-6">
+          <a href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+    <form>
+      <div class="bg-gray-200 flex justify-center items-center h-screen">
+        <div class="bg-white p-8 rounded-lg mx-40 h-2/3">
+          <h1 class="p-3 text-black select-none mx-40 text-xl font-bold">
+            SIGN IN
+          </h1>
+          <input
+            required
+            class="bg-gray-200 rounded-lg text-black text-xl my-4 cursor-pointer border block border-gray-200 py-3 px-4 w-full h-15"
+            type="email"
+            id="email"
+            placeholder="Email"
+          />
+          <div class="flex relative items-center my-5">
+            <input
+              id="password"
+              required
+              class="bg-gray-200 text-xl rounded-lg text-black my-4 border block border-gray- 200 py-3 px-4 w-full h-15 cursor-pointer select-none"
+              type="password"
+              placeholder="Password"
+            />
+            <svg
+              id="show-password"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-4 absolute right-0 cursor-pointer"
+              viewBox="0 0 20 20"
+              fill="bg-gray-200"
+            >
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path
+                fill-rule="evenodd"
+                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 
+          9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-700 py-3 px-4 text-white h-16 w-full rounded-lg"
+            onclick="login()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+    <script src="login-page.js"></script>
+  </body>
+</html>
