@@ -29,4 +29,6 @@ function login() {
   } else {
     alert("invalid identity");
   }
+
+  return false;
 }
