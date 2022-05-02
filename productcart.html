@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link href="/dist/output.css" rel="stylesheet" />
     
     <title>Ice Paint Store</title>
 </head>
 <body>
     <header>
-        <nav
+      <nav
         class="relative bg-black w-full py-2 flex justify-around md:justify-between md:px-16"
       >
         <div class="logo md:w-1/6 flex justify-between">
@@ -34,11 +37,12 @@
               <i class="ri-menu-fill ri-2x"></i>
             </span>
           </button>
-
-          <img class="cursor-pointer" src="./img/icepaintlogo.png" alt="" />
+          <a href="./index.html">
+            <img class="cursor-pointer" src="./img/icepaintlogo.png" alt="" />
+          </a>
         </div>
 
-        <ul
+        <!-- <ul
           id=""
           class="h-100 hidden justify-between sm:flex sm:items-center text-white md:w-1/6"
         >
@@ -51,15 +55,15 @@
           <li class="hover:text-gray-600 list-none md:mx-2">
             <a href="#footer">Help</a>
           </li>
-        </ul>
+        </ul> -->
 
         <div class="flex justify-between items-center">
-          <a href="#" class="text-white mr-8">Login</a>
-          <img class="cursor-pointer" src="./img/shopping-cart.png" alt="" />
+          <a href="./index.html" class="text-white mr-8">Log out</a>
+          <!-- <img class="cursor-pointer" src="./img/shopping-cart.png" alt="" /> -->
         </div>
       </nav>
 
-      <ul
+      <!-- <ul
         id="mobile-nav"
         class="hidden flex-col w-1/2 p-4 absolute bg-black text-white text-center py-4 left-0 z-10"
       >
@@ -72,15 +76,17 @@
         <li class="list-none p-6 my-6">
           <a href="#">Help</a>
         </li>
-      </ul>
+      </ul> -->
     </header>
 
-    
-
     <div class="w-10/12 h-full mx-auto mt-4">
-       
-      <div class="flex justify-end" >
-        <button class="bg-blue-800 mt-8 px-5 text-white py-2 rounded-md hover:bg-blue-600 mb-4 " id="newProduct">Add New Products</button>
+      <div class="flex justify-end">
+        <button
+          class="bg-blue-800 mt-8 px-5 text-white py-2 rounded-md hover:bg-blue-600 mb-4"
+          id="newProduct"
+        >
+          Add New Products
+        </button>
       </div>
 
       <table id="productHead" class="table-fixed bg-gray-100 w-full" >
@@ -149,7 +155,7 @@
                     </div>
                   </tr> -->
 
-                  <!-- <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
+            <!-- <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
                     <td class="px-4 py-1">2</td>
                     <td class="px-22">Ice Blue</td>
                     <td class="px-22">35</td>
@@ -160,10 +166,8 @@
                         <td class="px-4 text-red-700 hover:cursor-pointer" id="deleteBtn">Delete</td>
                     </div>
                   </tr> -->
-                      
-              </tbody>
-
-          </table>
+          </tbody>
+        </table>
       </div>
       <section class="w-10/12 bg-gray-200 h-3/6 m-auto mx-auto mt-6">
         <div class="p-6 text-xl font-normal md:ml-10">
@@ -179,45 +183,77 @@
           <h2>Proceed to Checkout</h2>
         </button>
       </section>
-        
-
     </div>
 
     <div id="productModal" class="hidden absolute right-0 left-0 top-8">
-      <section class=" flex justify-between items-center w-full md:h-screen">
+      <section class="flex justify-between items-center w-full md:h-screen">
         <div class="w-full flex flex-col mx-auto bg-white shadow-lg md:w-2/3">
-    
-          <div class=" bg-blue-800 h-16 flex justify-around md:justify-between items-center md:px-16 ">
-            <h3 class=" flex bg-blue-800 text-lg text-white font-bold">Select Product Details</h3>
-            <button id="closeProductModal" class="text-white border w-6 h-6 mt-2 hover:bg-gray-400">X</button>
+          <div
+            class="bg-blue-800 h-16 flex justify-around md:justify-between items-center md:px-16"
+          >
+            <h3 class="flex bg-blue-800 text-lg text-white font-bold">
+              Select Product Details
+            </h3>
+            <button
+              id="closeProductModal"
+              class="text-white border w-6 h-6 mt-2 hover:bg-gray-400"
+            >
+              X
+            </button>
           </div>
-          <div class="flex flex-col items-center md:justify-between md:flex-row md:px-16 md:py-2">
-            <div id="productDescDiv" class="hidden md:flex-1 ">
-              <img id="productImg" src="./img/paintbucketsBlue.png" class="flex w-40 h-40" alt="">
-              <div class="flex flex-col justify-center align-middle ">
-                <h1 id="" class="flex font-bold text-xl ">PRODUCT DESCRIPTION</h1>
-                <h2 id="productName" class="text-blue-800 font-bold text-2xl">Ice Blue</h2>
-                <p id="productDesc" class="font-light text-2lx">A budget matt emulsion finish<br> emulsion with covering capacity <br>of
-                  6-7sqm/Ltr. For interior use<br> only.</p>
-                <p id="productPriceRate" class="font-bold text-2xl text-blue-800">₦ 24, 000</p>
-                <br>
+          <div
+            class="flex flex-col items-center md:justify-between md:flex-row md:px-16 md:py-2"
+          >
+            <div id="productDescDiv" class="hidden md:flex-1">
+              <img
+                id="productImg"
+                src="./img/paintbucketsBlue.png"
+                class="flex w-40 h-40"
+                alt=""
+              />
+              <div class="flex flex-col justify-center align-middle">
+                <h1 id="" class="flex font-bold text-xl">
+                  PRODUCT DESCRIPTION
+                </h1>
+                <h2 id="productName" class="text-blue-800 font-bold text-2xl">
+                  Ice Blue
+                </h2>
+                <p id="productDesc" class="font-light text-2lx">
+                  A budget matt emulsion finish<br />
+                  emulsion with covering capacity <br />of 6-7sqm/Ltr. For
+                  interior use<br />
+                  only.
+                </p>
+                <p
+                  id="productPriceRate"
+                  class="font-bold text-2xl text-blue-800"
+                >
+                  ₦ 24, 000
+                </p>
+                <br />
               </div>
             </div>
-            <div class=" w-10/12 h-88 pl-3 md:w-1/2">
+            <div class="w-10/12 h-88 pl-3 md:w-1/2">
               <h2 class="text-lg font-semibold mt-2">Color</h2>
               <div class="relative w-full inline-flex items-center">
-                <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                <span
+                  class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
+                >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
-                <select id="productList" name="Paint"
-                  class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                <select
+                  id="productList"
+                  name="Paint"
+                  class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
+                >
                   <option disabled value="" selected>Select</option>
-                  
                 </select>
               </div>
               <h2  class="text-lg font-semibold mt-2">Room size</h2>
               <div class="relative w-full inline-flex items-center">
-                <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                <span
+                  class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
+                >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
                 <select id="roomSize" name="Sizes"
@@ -230,7 +266,9 @@
               </div>
               <h2 class="text-lg font-semibold mt-2">Number of rooms</h2>
               <div class="relative w-full inline-flex items-center">
-                <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                <span
+                  class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
+                >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
                 <select id="numberRoom" name="Rooms"
@@ -258,7 +296,9 @@
               </div> -->
               <h2 class="text-lg font-semibold mt-2">Window Sizes</h2>
               <div class="relative w-full inline-flex items-center">
-                <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                <span
+                  class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
+                >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
                 <select id="windowNumber" name="windowNumber"
@@ -272,7 +312,9 @@
               </div>
               <h2 class="text-lg font-semibold mt-2">Number of Coat</h2>
               <div class="relative w-full inline-flex items-center">
-                <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                <span
+                  class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
+                >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
                 <select id="spreadRatio"
@@ -285,7 +327,7 @@
                   
                 </select>
               </div>
-    
+
               <div class="">
                 <button id="calculate" onclick="calculate()" class="bg-blue-800 rounded-lg font-bold text-white mt-8 w-full h-10">SUBMIT</button>
               </div>
@@ -295,7 +337,7 @@
       </section>
     </div>
 
-    <hr class="w-full mx-auto">
+    <hr class="w-full mx-auto" />
     <!-- summary section -->
     <!-- <section class="w-full bg-gray-200 h-3/6 m-auto mx-auto mt-6">
       <div class="p-6 text-xl font-normal md:ml-10">
