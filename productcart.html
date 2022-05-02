@@ -13,9 +13,10 @@
       rel="stylesheet"
     />
     <link href="/dist/output.css" rel="stylesheet" />
-    <title>Product Cart Page</title>
-  </head>
-  <body>
+    
+    <title>Ice Paint Store</title>
+</head>
+<body>
     <header>
       <nav
         class="relative bg-black w-full py-2 flex justify-around md:justify-between md:px-16"
@@ -88,24 +89,61 @@
         </button>
       </div>
 
-      <div class="overflow-auto shadow md:block z-0" id="table">
-        <table class="relative w-full h-full bg-gray-200">
-          <thead class="flex flex-row justify-between text-white bg-gray-500">
-            <tr class="">
-              <!-- <th class="py-2 px-16">ID</th> -->
-              <th class="px-20 py-2">Product Name</th>
-              <th class="px-16">Volume L</th>
-              <th class="px-16">Price/Volume (#)</th>
-              <th class="px-20">Total</th>
-              <th class="px-16">Action</th>
+      <table id="productHead" class="table-fixed bg-gray-100 w-full" >
+        <thead class="bg-gray-500">
+            <tr class="text-white">
+                <!-- <th class="py-2">ID</th> -->
+                <th class="py-2">Product Name</th>
+                <th>Volume (ltr)</th>
+                <th class="">Price/Volume (₦/ltr)</th>
+                <th>Total (₦)</th>
+                <th>Actions</th>
             </tr>
-          </thead>
+        </thead>
 
-          <tbody
-            id="productTable"
-            class="flex flex-col justify-between m-auto mt-10"
-          >
-            <!-- <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
+        <tbody id="productBody" class="text-center" >
+              
+            <!-- <tr id="item-info" class="mt-8 border-b-2 border-gray-300"> -->
+                
+                <!-- <td></td> 
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a class="text-blue-700" href="#"></a> <a class="text-red-700" href="#"> </a></td>
+            </tr> -->
+
+            <!-- <tr class="">
+                <!- <td>1</td> --> 
+                <!-- <td>Ice Blue</td> 
+                <td>250</td>
+                <td>A budget matt emulsion 
+                    finish emulsion with color
+                </td>
+                <td>200</td>
+                <td>Edit Delete</td>
+            </tr>  -->
+
+        </tbody>
+    </table>
+        
+
+      <!-- <div class="overflow-auto  shadow md:block z-0" id="table">
+          <table class="relative w-full h-full  bg-gray-200  ">
+              <thead class=" flex flex-row justify-between text-white bg-gray-500">
+                  <tr class=""> -->
+                      <!-- <th class="py-2 px-16">ID</th> -->
+                      <!-- <th class="px-20 py-2">Product Name</th>
+                      <th class="px-16">Volume L</th>
+                      <th class="px-16">Price/Volume (#)</th>
+                      <th class="px-20">Total</th>
+                      <th class="px-16">Action</th>
+                  </tr>
+              </thead>
+
+              <tbody id="productTable" class=" flex flex-col justify-between m-auto mt-10  "> -->
+                 
+
+                  <!-- <tr class="m-auto py-0 bg-white mb-4 ml-14 rounded-r-md mx-auto font-medium border-l-4 border-blue-800">
                     <td class="px-4 py-1">2</td>
                     <td class="px-24">Ice Blue</td>
                     <td class="px-24">35</td>
@@ -131,17 +169,17 @@
           </tbody>
         </table>
       </div>
-      <section class="w-full bg-gray-200 h-3/6 m-auto mx-auto mt-6">
+      <section class="w-10/12 bg-gray-200 h-3/6 m-auto mx-auto mt-6">
         <div class="p-6 text-xl font-normal md:ml-10">
-          <h2 class="mb-6">Products Summary:</h2>
-          <h2>Total Price</h2>
+          <!-- <h2 class="mb-6">Products Summary:</h2> -->
+          <h2>Total Price: <span id="totalSum">0</span></h2>
         </div>
       </section>
-
-      <section class="overflow-auto w-full m-auto bg-blue-800 h-2/6 md:block">
-        <button
-          class="flex justify-center align-middle ml-4 p-3 text-xl sm:ml-48 md:mx-auto text-white"
-        >
+  
+      <section class="overflow-auto w-10/12 m-auto bg-blue-800 h-2/6 md:block">
+        
+        <button id="check-out" class="flex justify-center align-middle ml-4 p-3 text-xl sm:ml-48 md:mx-auto  text-white">
+          
           <h2>Proceed to Checkout</h2>
         </button>
       </section>
@@ -211,21 +249,19 @@
                   <option disabled value="" selected>Select</option>
                 </select>
               </div>
-              <h2 class="text-lg font-semibold mt-2">Room size</h2>
+              <h2  class="text-lg font-semibold mt-2">Room size</h2>
               <div class="relative w-full inline-flex items-center">
                 <span
                   class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
                 >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
-                <select
-                  name="Sizes"
-                  class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-                >
+                <select id="roomSize" name="Sizes"
+                  class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
                   <option disabled value="" selected>Select</option>
-                  <option value="Mini">Small</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Large">Large</option>
+                  <option id="roomSmall" value="Small">Small</option>
+                  <option id="roomMedium" value="Medium">Medium</option>
+                  <option id="roomLarge" value="Large">Large</option>
                 </select>
               </div>
               <h2 class="text-lg font-semibold mt-2">Number of rooms</h2>
@@ -235,18 +271,14 @@
                 >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
-                <select
-                  name="Rooms"
-                  class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-                >
-                  <option disabled value="" selected>
-                    Select Number of Rooms
-                  </option>
-                  <option value="r1">1</option>
-                  <option value="r2">2</option>
-                  <option value="r3">3</option>
-                  <option value="r4">4</option>
-                  <option value="r5">5</option>
+                <select id="numberRoom" name="Rooms"
+                  class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                  <option  disabled value="" selected>Select Number of Rooms</option>
+                  <option id="roomOne" value="1">1</option>
+                  <option id="roomTwo" value="2">2</option>
+                  <option id="roomThree" value="3">3</option>
+                  <option id="roomFour" value="4">4</option>
+                  <option id="roomFive" value="5">5</option>
                 </select>
               </div>
               <!-- <h2 class="text-lg font-semibold mt-2">Window size</h2>
@@ -262,54 +294,42 @@
                   <option value="large">large</option>
                 </select>
               </div> -->
-              <h2 class="text-lg font-semibold mt-2">Number of windows</h2>
+              <h2 class="text-lg font-semibold mt-2">Window Sizes</h2>
               <div class="relative w-full inline-flex items-center">
                 <span
                   class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
                 >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
-                <select
-                  name="windowNumber"
-                  class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-                >
-                  <option disabled value="" selected>
-                    Select number of windows
-                  </option>
-                  <option value="w1">1</option>
-                  <option value="w2">2</option>
-                  <option value="w3">3</option>
-                  <option value="w4">4</option>
-                  <option value="w5">5</option>
+                <select id="windowNumber" name="windowNumber"
+                  class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                  <option disabled value="" selected>Select Window Sizes</option>
+                  <option id="windowOne" value="w1">Small</option>
+                  <option id="windowTwo" value="w2">Medium</option>
+                  <option id="windowThree" value="w3">Large</option>
+                  
                 </select>
               </div>
-              <h2 class="text-lg font-semibold mt-2">Spread ratio</h2>
+              <h2 class="text-lg font-semibold mt-2">Number of Coat</h2>
               <div class="relative w-full inline-flex items-center">
                 <span
                   class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
                 >
                   <i class="ri-arrow-down-s-fill ri-2x"></i>
                 </span>
-                <select
-                  class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-                >
-                  <option disabled value="" selected>
-                    Select spread ratio
-                  </option>
-                  <option value="c1">1</option>
-                  <option value="c2">2</option>
-                  <option value="c3">3</option>
-                  <option value="c4">4</option>
-                  <option value="c5">5</option>
+                <select id="spreadRatio"
+                  class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                  <option disabled value="" selected>Select spread ratio </option>
+                  <option id="coatOne" value="c1">1</option>
+                  <option id="coatTwo" value="c2">2</option>
+                  <option id="coatThree" value="c3">3</option>
+          
+                  
                 </select>
               </div>
 
               <div class="">
-                <button
-                  class="bg-blue-800 rounded-lg font-bold text-white mt-8 w-full h-10"
-                >
-                  SUBMIT
-                </button>
+                <button id="calculate" onclick="calculate()" class="bg-blue-800 rounded-lg font-bold text-white mt-8 w-full h-10">SUBMIT</button>
               </div>
             </div>
           </div>
@@ -333,5 +353,6 @@
     </section> -->
 
     <script src="productcart.js"></script>
-  </body>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</body>
 </html>
