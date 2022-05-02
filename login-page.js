@@ -20,11 +20,14 @@ function login() {
 
   if (email === "admin@gmail.com" && password === "admin") {
     alert("Welcome admin");
-    window.history.pushState("", "", "http://127.0.0.1:5500/admin.html");
+    // window.history.pushState("", "", "http://127.0.0.1:5500/admin.html");
+    window.history.pushState("", "", "/admin.html");
+
     window.reload();
   } else if (email === "user@gmail.com" && password === "user") {
     alert("welcome 😊");
-    window.history.pushState("", "", "http://127.0.0.1:5500/productCart.html");
+    // window.history.pushState("", "", "http://127.0.0.1:5500/productCart.html");
+    window.history.pushState("", "", "/productCart.html");
     window.reload();
   } else {
     alert("invalid identity");
