@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
     <link href="/dist/output.css" rel="stylesheet" />
-  </head>
-  <body>
+</head>
+<body>
+
     <!-- Nav Section -->
 
     <div class="w-full h-16 bg-black flex items-center justify-between">
-      <a href="./index.html">
-        <img src="./img/icepaintlogo.png" class="ml-12 py-2" />
-      </a>
-      <a href="./index.html" class="cursor-pointer text-white mr-12">Log out</a>
+        <img src="./img/icepaintlogo.png" class="ml-12 py-2">
+        <span class="text-white mr-12">Login</span>
     </div>
 
     <!-- Header Section -->
 
     <div class="flex justify-between">
-      <h1 class="ml-16 mt-8 text-2xl font-medium">Store Information</h1>
-      <button
-        id="newProductButton"
-        class="mr-20 bg-blue-700 text-white p-4 mt-8 font-bold rounded-lg shadow-lg h-12 flex items-center"
-      >
-        Add New Product
-      </button>
+        <h1 class="ml-16 mt-8 text-2xl font-medium" >Store Information</h1>
+        <button id="newProductButton" class="mr-20 bg-blue-700 text-white p-4 mt-8 font-bold rounded-lg shadow-lg h-12 flex items-center">Add New Product</button>
     </div>
 
     <!-- Table Section -->
 
     <div class="w-full h-full mx-auto mt-8 relative">
-      <div>
-        <table class="table-fixed bg-gray-100 w-screen">
-          <thead class="bg-gray-500">
-            <tr class="text-white">
-              <th class="py-2">ID</th>
-              <th>Product</th>
-              <th>Product URL</th>
-              <th>Quantity in Stock</th>
-              <th>Description</th>
-              <th>Price/Volume</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
 
-          <tbody id="tableItems" class="text-center">
-            <!-- <tr class="mt-8 border-b-2 border-gray-300">
+        <div>
+
+            <table class="table-fixed bg-gray-100 w-screen" >
+                <thead class="bg-gray-500">
+                    <tr class="text-white">
+                        <th class="py-2">S/N</th>
+                        <th>Product</th>
+                        <th>Product URL</th>
+                        <th>Quantity in Stock</th>
+                        <th >Description</th>
+                        <th>Price/Volume (₦)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableItems" class="text-center" >
+                      
+                    <!-- <tr class="mt-8 border-b-2 border-gray-300">
                         <td>1</td>
                         <td>Ice Blue</td> 
                         <td>250</td>
@@ -69,111 +66,66 @@
                         <td>200</td>
                         <td>Edit Delete</td>
                     </tr> -->
-          </tbody>
-        </table>
-      </div>
+
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
-    <form id="product-form" class="flex flex-col justify-center items-center">
-      <div
-        id="createProductForm"
-        class="hidden w-1/2 h-full mt-16 pb-10 bg-gray-100 shadow-2xl absolute top-6"
-      >
-        <div
-          class="bg-blue-800 h-12 flex justify-around md:justify-between items-center md:px-16"
-        >
-          <h3 class="flex bg-blue-800 text-lg text-white font-bold">
-            Select Product Details
-          </h3>
-          <button
-            id="closeProductForm"
-            class="text-white border w-6 h-6 mt-2 hover:bg-gray-400"
-          >
-            X
-          </button>
-        </div>
-        <div class="pl-32">
-          <h2 class="text-lg font-semibold mt-4">Product</h2>
-          <div class="relative w-3/4 inline-flex items-center">
-            <span
-              class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
-            >
-              <i class="ri-arrow-down-s-fill ri-2x"></i>
-            </span>
-            <input
-              id="product-name"
-              type="text"
-              required
-              class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-            />
-          </div>
+        <form id="product-form"  class=" flex flex-col justify-center items-center ">
+            
+            <div id="createProductForm" class="hidden  w-1/2 h-full mt-16 pb-10 bg-gray-100 shadow-2xl absolute top-6">
+                <div class=" bg-blue-800 h-12 flex justify-around md:justify-between items-center md:px-16 ">
+                    <h3 class=" flex bg-blue-800 text-lg text-white font-bold">Select Product Details</h3>
+                    <button id="closeProductForm" class="text-white border w-6 h-6 mt-2 hover:bg-gray-400">X</button>
+                </div>
+                <div class="pl-32">
+                    <h2 class="text-lg font-semibold mt-4">Product</h2>
+                <div class="relative w-3/4 inline-flex items-center">
+                    <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                    <i class="ri-arrow-down-s-fill ri-2x"></i>
+                    </span>
+                    <input id="product-name" type="text" required
+                    class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
 
-          <h2 class="text-lg font-semibold mt-4">Product URL</h2>
-          <div class="relative w-3/4 inline-flex items-center">
-            <span
-              class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
-            >
-              <i class="ri-arrow-down-s-fill ri-2x"></i>
-            </span>
-            <input
-              id="productURL"
-              name="productURL"
-              required
-              type="text"
-              class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-            />
-          </div>
+                </div>
+                
+                <h2 class="text-lg font-semibold mt-4">Product URL</h2>
+                <div class="relative w-3/4 inline-flex items-center">
+                    <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                    <i class="ri-arrow-down-s-fill ri-2x"></i>
+                    </span>
+                    <input id="productURL" name="productURL" required type="text"
+                    class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
 
-          <h2 class="text-lg font-semibold mt-4">Quantity in Stock</h2>
-          <div class="relative w-3/4 inline-flex items-center">
-            <span
-              class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none"
-            >
-              <i class="ri-arrow-down-s-fill ri-2x"></i>
-            </span>
-            <input
-              id="stockQuantity"
-              name="stockQuantity"
-              required
-              type="number"
-              class="rounded-lg w-full text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-            />
-          </div>
-          <span>
-            <h2 class="text-lg font-semibold mt-4">Price/Volume</h2>
-            <input
-              type="number"
-              required
-              name="pricePerVolume"
-              id="pricePerVolume"
-              class="rounded-lg w-3/4 text-black bg-gray-200 h-10 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-            />
-          </span>
-          <span>
-            <h2 class="text-lg font-semibold mt-4">Description</h2>
-            <input
-              type="text"
-              required
-              name="description"
-              id="description"
-              class="rounded-lg w-3/4 text-black bg-gray-200 h-32 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none"
-            />
-          </span>
+                </div>
 
-          <div class="">
-            <button
-              id="addButton"
-              type="submit"
-              value="submit"
-              class="bg-blue-800 rounded-lg font-bold text-white mt-8 w-3/4 h-10"
-            >
-              Submit
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
+                <h2 class="text-lg font-semibold mt-4">Quantity in Stock</h2>
+                <div class="relative w-3/4 inline-flex items-center">
+                    <span class="w-2 h-2 absolute top-0 right-0 mr-10 mb-4 pointer-events-none">
+                    <i class="ri-arrow-down-s-fill ri-2x"></i>
+                    </span>
+                    <input id="stockQuantity" name="stockQuantity" required type="number"
+                    class="rounded-lg w-full text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+
+                </div>
+                    <span>
+                        <h2 class="text-lg font-semibold mt-4">Price/Volume</h2>
+                        <input type="number" required name="pricePerVolume" id="pricePerVolume" class="rounded-lg w-3/4 text-black bg-gray-200 h-10  pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                    </span>
+                    <span>
+                        <h2 class="text-lg font-semibold mt-4">Description</h2>
+                        <input type="text" required  name="description" id="description" class="rounded-lg w-3/4 text-black bg-gray-200 h-32 pl-5 pr-10 hover:border-gray-400 focus:outline-none appearance-none">
+                    </span>
+        
+                    <div class="">
+                        <button id="addButton" type="submit" value="submit" class="bg-blue-800 rounded-lg font-bold text-white mt-8 w-3/4 h-10"> Submit </button>
+                    </div>
+                </div>
+            </div>
+        </form>
 
     <script src="admin.js"></script>
-  </body>
+</body>
 </html>
