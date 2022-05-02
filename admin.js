@@ -91,22 +91,22 @@ const fillTable = () => {
         row.style.borderBottom = "1px solid #000"
         row.style.borderColor = 'gray'
         row.classList.add('my-row')
-        let remove = document.createElement('button');
-        remove.className = 'remove';
-        remove.textContent = 'Remove';
         row.append(tableInfo(items.id));
         row.append(tableInfo(items.productName));
         row.append(tableInfo(items.productURL));
         row.append(tableInfo(items.stockQuantity));
         row.append(tableInfo(items.description));
         row.append(tableInfo(items.pricePerVolume));
-        row.append(remove)
+        row.append(actions(items.id));
+
         
         tableItems.append(row);
         
 
 });
 };
+
+
 
 const tableInfo = (info) => {
     const items = document.createElement('td');
@@ -116,34 +116,28 @@ const tableInfo = (info) => {
 };
 
 
-// function onDelete(td){
-//     if(confirm('Delete this record?')){
-//         itemRow =  td.parentElement.parentElement;
-//         document.getElementById('table-info').deleteRow(itemRow.rowIndex);
-//     }
-// }
-
-
-
-// tableItems.addEventListener('click', (Event, id) => {
-//     if (Event.target.className == 'remove');
-//     (console.log('hello'))
-//     let products = JSON.parse(localStorage.getItem("products"));
-//     products = products.filter((product) => product.id != id);
-//     localStorage.setItem('products', JSON.stringify(products));
-//     fillTable();
-
-// })
-
-
-// removeItem.addEventListener('click', (id) => {
-//     let products = JSON.parse(localStorage.getItem("products"));
-//     console.log(products);
-//     products = products.filter((product) => product.id != id);
-//     localStorage.setItem('products', JSON.stringify(products));
-//     fillTable();
-// })
-
+const actions = (id) => {
+    
+    const actionsCell = document.createElement("td");
+    actionsCell.style.display = "flex";
+    actionsCell.style.justifyContent = "center";
+  
+    const removeButton = document.createElement("button");
+    removeButton.innerHTML = `Delete`;
+    removeButton.style.color = 'red'
+    removeButton.addEventListener("click", () => deleteProduct(id));
+  
+    actionsCell.appendChild(removeButton);
+    return actionsCell;
+  };
+  
+  const deleteProduct = (id) => {
+    let products = JSON.parse(localStorage.getItem("products"));
+    products = products.filter((product) => product.id != id);
+    localStorage.setItem("products", JSON.stringify(products));
+    console.log(products.length);
+    fillTable();
+  };
 
 
 
