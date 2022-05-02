@@ -24,7 +24,7 @@ now you have the project folder on your computer, You need to create a branch fo
 
 open your terminal on your vscode, to do that look for terminal tab on your vscode menu bar on the top, and click on New Terminal. once the terminal opens, type:
 
-git checkout [yourGithubUsername-feature]
+git checkout -b [yourGithubUsername-feature]
 
 for example my own will look like this
 
